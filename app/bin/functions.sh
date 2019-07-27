@@ -173,7 +173,7 @@ function createSymLinks(){
     cd $__DIR__/../..
     rm -rf  engine/Library
     mkdir -p engine/Library
-    ln -s ../../vendor/shopware/shopware/engine/Library/CodeMirror engine/Library/CodeMirror
+    ln -s ../../vendor/shopware/shopware/engine/Library/Zend engine/Library/Zend
     ln -s ../../vendor/shopware/shopware/engine/Library/ExtJs engine/Library/ExtJs
     ln -s ../../vendor/shopware/shopware/engine/Library/TinyMce engine/Library/TinyMce
 
@@ -185,5 +185,9 @@ function createSymLinks(){
     ln -s ../../vendor/shopware/shopware/themes/Backend/ExtJs themes/Backend/ExtJs
     ln -s ../../vendor/shopware/shopware/themes/Frontend/Bare themes/Frontend/Bare
     ln -s ../../vendor/shopware/shopware/themes/Frontend/Responsive themes/Frontend/Responsive
+
+    rm -rf tests/{Functional,Unit}
+    ln -s ../vendor/shopware/shopware/tests/Functional tests/Functional
+    ln -s ../vendor/shopware/shopware/tests/Unit tests/Unit
 }
 
